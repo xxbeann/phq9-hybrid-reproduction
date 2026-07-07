@@ -96,7 +96,7 @@ def main() -> None:
     ax.axvline(0.6, ls="--", color="gray", lw=1)
     ax.set_xlabel("alpha (weight on fixed block)")
     ax.set_ylabel("quadratic weighted kappa (mean +/- std)")
-    ax.set_title("Cross-dataset replication: hybrid PHQ-9 agreement vs alpha")
+    # 제목 생략 — 그림 설명은 논문 캡션(그림 4-3)이 담당
     ax.legend()
     fig.tight_layout()
     fig.savefig(FIGS / "crossval_alpha_kappa.png", dpi=150)
