@@ -162,7 +162,7 @@ def plot_alpha_sweep(sweep: pd.DataFrame) -> None:
     ax.axvline(0.6, ls="--", color="gray", lw=1, label="alpha=0.6 (neutral)")
     ax.set_xlabel("alpha (weight on fixed block)")
     ax.set_ylabel("metric (mean +/- std over 15 rotation pairs)")
-    # 제목 생략 — 그림 설명은 논문 캡션(그림 4-1)이 담당
+    ax.set_title("Hybrid PHQ-9: metric vs alpha")
     ax.legend()
     fig.tight_layout()
     fig.savefig(FIGS / "alpha_sweep.png", dpi=150)
@@ -179,7 +179,7 @@ def plot_comparison(comp: pd.DataFrame) -> None:
     ax.set_yticklabels(sub["method"], fontsize=8)
     ax.invert_yaxis()
     ax.set_xlabel("classification accuracy vs full 9-item PHQ-9")
-    # 제목 생략 — 그림 설명은 논문 캡션(그림 4-2)이 담당
+    ax.set_title("Estimator comparison")
     fig.tight_layout()
     fig.savefig(FIGS / "estimator_comparison.png", dpi=150)
     plt.close(fig)

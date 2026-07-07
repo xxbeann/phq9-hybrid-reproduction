@@ -43,7 +43,7 @@ def main() -> None:
     ax.axvline(0.6, ls="--", color="gray", lw=1, label="α=0.6 (5문항 동일가중)")
     ax.set_xlabel("α (고정 블록 가중)")
     ax.set_ylabel("metric (mean +/- std over 15 rotation pairs)")
-    # 제목 생략 — 그림 설명은 논문 캡션(그림 4-1)이 담당
+    ax.set_title("Hybrid PHQ-9: metric vs alpha")
     # Longer Korean labels make loc="best" cover the acc line around
     # alpha 0.75-0.80; pin to the empty lower-left corner instead.
     ax.legend(loc="lower left", fontsize=9)

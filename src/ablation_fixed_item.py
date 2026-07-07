@@ -99,7 +99,7 @@ def main():
     ax.axvspan(-0.5, 0.5, color="gold", alpha=0.15)  # q3 수면 강조
     ax.set_ylim(0.7, 1.0)
     ax.set_ylabel("3집단 평균")
-    # 제목 생략 — 그림 설명은 논문 캡션(그림 4-4)이 담당
+    ax.set_title("세 번째 고정 문항 선택에 따른 성능 (α=0.6)")
     ax.legend()
     fig.tight_layout()
     fig.savefig(FIGS / "ablation_3rd_fixed.png", dpi=150)
